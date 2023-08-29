@@ -81,9 +81,9 @@ public class GameTest {
     @Test
     public void ShouldSetName() {
 
-        player1.setName("Маша");
+        player1.setName("Mary");
 
-        String expected = "Маша";
+        String expected = "Mary";
         String actual = player1.getName();
 
         Assertions.assertEquals(expected, actual);
@@ -116,7 +116,7 @@ public class GameTest {
     }
 
     @Test
-    public void shouldDraw() {
+    public void shouldEqualStrength() {
         Game game = new Game();
 
         game.register(player1);
@@ -146,7 +146,7 @@ public class GameTest {
         game.register(player1);
 
         Assertions.assertThrows(NotRegisteredException.class, () -> {
-            game.round("Some", "Дэн");
+            game.round("Мария", "Павел");
         });
     }
 }
