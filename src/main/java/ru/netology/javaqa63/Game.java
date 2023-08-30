@@ -9,8 +9,8 @@ public class Game {
         players.add(player);
     }
 
-    int result;
     public int findByName(String name) {
+        int result;
         for (Player player : players) {
             if (player.getName().equals(name)) {
                 result = player.getStrength();
@@ -38,11 +38,11 @@ public class Game {
             );
         }
         if (strengthPlayer1 > strengthPlayer2) {
-            return 1;
+            return 1;// победа 1
         } else if (strengthPlayer1 < strengthPlayer2) {
-            return 2;
+            return 2;// победа 2
         } else {
-            return 0;
+            return 0;//ничья
         }
     }
 
